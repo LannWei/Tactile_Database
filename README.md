@@ -5,9 +5,9 @@ This repository contains PyTorch scripts for running tactile image benchmarks on
 ## Included scripts
 
 - `force_regression.py`: predict `fx`, `fy`, `fz` from tactile images.
-- `shape_classification.py`: shape classification with `balanced` and `longtail` settings.
+- `shape_classification.py`: shape classification settings.
 - `grating_classification.py`: grating `pattern`, `size`, and `joint` classification.
-- `mae_pretrain.py` and `mae_pretrain_ddp.py`: optional MAE pretraining for ViT-S/16.
+- `mae_pretrain.py`: MAE pretraining for scratch.
 - `run_all.py`: run the three downstream benchmarks in sequence.
 - `common.py` and `torch_common.py`: shared data loading, metrics, and training utilities.
 
