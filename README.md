@@ -61,11 +61,10 @@ python grating_classification.py --device cuda
 python run_all.py --device cuda
 ```
 
-Optional MAE pretraining:
+MAE pretraining:
 
 ```bash
 python mae_pretrain.py --device cuda --image-size 224
-torchrun --nproc_per_node=4 mae_pretrain_ddp.py --image-size 224
 ```
 
 ## Notes
