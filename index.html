@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TacVerse | Multi-Sensor Tactile Benchmark</title>
+    <meta
+      name="description"
+      content="TacVerse is a multi-sensor dataset and benchmark for cross-sensor vision-based tactile perception."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site navigation">
+      <a class="brand" href="#overview">TacVerse</a>
+      <nav>
+        <a href="#numbers">Numbers</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#protocols">Protocols</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Multi-Sensor Tactile Dataset</p>
+          <h1>TacVerse</h1>
+          <p class="subtitle">
+            A Multi-Sensor Dataset and Benchmark for Cross-Sensor
+            Vision-Based Tactile Perception
+          </p>
+          <p class="lead">
+            Seven sensors. Three tasks. One controlled benchmark for sensor
+            shift.
+          </p>
+          <p>
+            TacVerse provides 106,800 tactile images and standardised protocols
+            for within-sensor learning, zero-shot cross-sensor transfer, and
+            few-shot target adaptation.
+          </p>
+          <div class="button-row" aria-label="Project links">
+            <a class="button primary" href="#citation">Paper</a>
+            <a
+              class="button"
+              href="https://huggingface.co/datasets/Lan-2025/Tactile"
+              target="_blank"
+              rel="noreferrer"
+            >Dataset</a>
+            <a
+              class="button"
+              href="https://github.com/LannWei/Tactile_Database"
+              target="_blank"
+              rel="noreferrer"
+            >Code</a>
+          </div>
+          <div class="authors">
+            <p>
+              Lan Wei · Gurmeher Khurana · Sirine Bhouri · Wenhao Hong ·
+              Zeyuan Xin · Qingzheng Cong · Wen Fan · Yanzheng Xiang ·
+              Dandan Zhang
+            </p>
+            <p>
+              Imperial College London · Queen Mary University of London ·
+              King's College London
+            </p>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="Figure 1.png" alt="Seven vision-based tactile sensors and corresponding tactile images.">
+        </figure>
+      </section>
+
+      <section class="numbers section" id="numbers" aria-label="Key numbers">
+        <div class="metric">
+          <strong>106,800</strong>
+          <span>Tactile Images</span>
+        </div>
+        <div class="metric">
+          <strong>7</strong>
+          <span>VBTS Platforms</span>
+        </div>
+        <div class="metric">
+          <strong>3</strong>
+          <span>Perception Tasks</span>
+        </div>
+        <div class="metric">
+          <strong>3</strong>
+          <span>Evaluation Protocols</span>
+        </div>
+      </section>
+
+      <section class="section narrative" id="why">
+        <div class="section-heading">
+          <p class="eyebrow">Sensor Shift</p>
+          <h2>Why TacVerse?</h2>
+        </div>
+        <div class="narrative-copy">
+          <p>
+            Vision-based tactile sensors encode contact through different
+            optical, mechanical, and marker configurations. As a result, a
+            model that performs well on one sensor may not transfer reliably to
+            another. TacVerse provides task-aligned data and controlled
+            protocols to make this sensor-shift gap measurable and
+            reproducible.
+          </p>
+        </div>
+        <figure class="wide-figure">
+          <img src="Figure 1.png" alt="TacVerse tactile sensors and tactile observations.">
+        </figure>
+        <div class="sensor-labels" aria-label="Sensors included in TacVerse">
+          <span>GelSightNoMarker</span>
+          <span>GelSightMarker</span>
+          <span>MagicGripper</span>
+          <span>MagicTac</span>
+          <span>TacTip</span>
+          <span>ViTac</span>
+          <span>ViTacTip</span>
+        </div>
+        <p class="note">Covering IMM, MDM, MFM, and hybrid sensing configurations.</p>
+      </section>
+
+      <section class="section" id="tasks">
+        <div class="section-heading">
+          <p class="eyebrow">Dataset &amp; Tasks</p>
+          <h2>Three Complementary Tactile Tasks</h2>
+        </div>
+        <div class="task-grid">
+          <article class="task-card">
+            <img
+              class="task-image"
+              src="Figure 2-1.png"
+              alt="Shape classification tactile examples."
+            >
+            <div class="task-body">
+              <h3>Shape Classification</h3>
+              <p class="task-meta">9 classes · 30,094 images</p>
+              <p>Recognising local contact geometry across different tactile sensors.</p>
+            </div>
+          </article>
+          <article class="task-card">
+            <img
+              class="task-image"
+              src="Figure 2-2.png"
+              alt="Grating classification tactile examples."
+            >
+            <div class="task-body">
+              <h3>Grating Classification</h3>
+              <p class="task-meta">30 classes · 40,509 images</p>
+              <p>
+                Distinguishing fine-grained line and dot gratings with different
+                spatial scales.
+              </p>
+            </div>
+          </article>
+          <article class="task-card">
+            <img
+              class="task-image"
+              src="Figure 2-3.png"
+              alt="Force regression tactile examples."
+            >
+            <div class="task-body">
+              <h3>Force Regression</h3>
+              <p class="task-meta">36,197 images · Fx, Fy, Fz</p>
+              <p>Estimating normal and shear forces directly from tactile observations.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section protocols" id="protocols">
+        <div class="section-heading">
+          <p class="eyebrow">Evaluation Protocols</p>
+          <h2>A Controlled Cross-Sensor Benchmark</h2>
+        </div>
+        <figure class="protocol-figure">
+          <img src="Figure 3.png" alt="Within-sensor, zero-shot cross-sensor, and few-shot adaptation evaluation protocols.">
+        </figure>
+        <div class="protocol-grid">
+          <article class="info-card">
+            <h3>Within-Sensor</h3>
+            <p>Train and evaluate on the same tactile sensor.</p>
+          </article>
+          <article class="info-card">
+            <h3>Zero-Shot Cross-Sensor</h3>
+            <p>
+              Train on a source sensor and evaluate directly on a target sensor
+              without target labels.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Few-Shot Adaptation</h3>
+            <p>
+              Fine-tune the source-trained model using a small labelled subset
+              from the target-sensor training split. Evaluated for force
+              regression.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section findings" id="findings">
+        <div class="section-heading">
+          <p class="eyebrow">Results Summary</p>
+          <h2>Key Findings</h2>
+        </div>
+        <div class="findings-layout">
+          <figure class="chart result-figure">
+            <figcaption>Cross-sensor transfer pattern</figcaption>
+            <img src="Figure 4.png" alt="Cross-sensor transfer heatmap for TacVerse.">
+          </figure>
+          <figure class="chart result-figure">
+            <figcaption>Few-shot adaptation trend</figcaption>
+            <img src="Figure 5.png" alt="Few-shot adaptation curve for TacVerse.">
+          </figure>
+        </div>
+        <ul class="finding-list">
+          <li>Strong within-sensor performance does not guarantee cross-sensor transfer.</li>
+          <li>Shape classification is comparatively robust to sensor shift.</li>
+          <li>Grating classification and force regression are more sensor-dependent.</li>
+          <li>
+            Few-shot adaptation narrows the transfer gap, while tactile MAE
+            pretraining provides the most consistent gains across tasks.
+          </li>
+        </ul>
+        <p class="highlight">
+          MAE pretraining delivers the most consistent representation across
+          the evaluated tasks and sensors.
+        </p>
+      </section>
+
+      <section class="section resources" id="resources">
+        <div class="section-heading">
+          <p class="eyebrow">Resources &amp; Citation</p>
+          <h2>Resources</h2>
+        </div>
+        <div class="resource-grid">
+          <article class="resource-card">
+            <h3>Dataset</h3>
+            <p>Tactile images, annotations, metadata, and fixed data splits.</p>
+            <a
+              class="text-link"
+              href="https://huggingface.co/datasets/Lan-2025/Tactile"
+              target="_blank"
+              rel="noreferrer"
+            >View Dataset</a>
+          </article>
+          <article class="resource-card">
+            <h3>Code</h3>
+            <p>Training, evaluation, and experiment configuration files.</p>
+            <a
+              class="text-link"
+              href="https://github.com/LannWei/Tactile_Database"
+              target="_blank"
+              rel="noreferrer"
+            >View Code</a>
+          </article>
+          <article class="resource-card">
+            <h3>Paper</h3>
+            <p>Full benchmark design, experimental settings, and results.</p>
+            <a class="text-link" href="#citation">Read Paper</a>
+          </article>
+        </div>
+        <div class="citation" id="citation">
+          <h2>Citation</h2>
+          <p>If you find TacVerse useful, please cite:</p>
+          <pre><code>[update later]</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
