@@ -91,6 +91,7 @@ nav a:hover {
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
   align-items: center;
@@ -100,6 +101,8 @@ nav a:hover {
 }
 
 .hero-copy {
+  position: relative;
+  z-index: 2;
   width: 100%;
   min-width: 0;
   max-width: 620px;
@@ -224,6 +227,8 @@ h3 {
 }
 
 .hero-visual {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   border-radius: var(--radius);
   background: #edf2ee;
